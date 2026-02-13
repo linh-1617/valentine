@@ -151,10 +151,8 @@
       #biu-container svg {
         width: 100%;
         height: auto;
-        max-width: 350px;
       }
 
-      /* CSS cho Nét vẽ Phác thảo */
       .sketch-shape {
         stroke: #fde0b2; 
         stroke-width: 3.5;
@@ -218,25 +216,23 @@
       }
 
       /* =========================================
-         TỐI ƯU HÓA HIỂN THỊ TRÊN ĐIỆN THOẠI (MEDIA QUERY)
+         TỐI ƯU HÓA HIỂN THỊ TRÊN ĐIỆN THOẠI (FIXED)
          ========================================= */
       @media (max-width: 600px) {
         .title-container {
-          top: 10%; /* Hạ thấp tiêu đề xuống một chút */
+          top: 8%; /* Đẩy tiêu đề lên một chút */
         }
         .title-container h1 {
-          font-size: 26px; /* Thu nhỏ chữ để không bị rớt dòng */
+          font-size: 24px; /* Tiêu đề nhỏ gọn tinh tế hơn */
           padding: 0 10px;
         }
         #biu-container {
-          bottom: 3%;
-          left: 0; /* Đưa sát lề trái để căn chỉnh tốt hơn */
-          width: 80vw; /* Chiều rộng bằng 80% màn hình điện thoại */
-          max-width: 280px; /* Khóa kích thước tối đa để gấu không quá to */
+          bottom: 2%; /* Nằm sát đáy hơn */
+          left: 2%; /* Ôm lề trái */
+          width: 45vw; /* Thu nhỏ gấu lại chỉ còn 45% màn hình */
+          max-width: 160px; /* Khóa kích thước để gấu luôn nhỏ nhắn dễ thương */
         }
-        .biu-text { 
-          font-size: 55px; /* Giữ chữ biu to rõ ràng */
-        }
+        /* Đã xóa thuộc tính .biu-text ở đây để nó tự động nhỏ lại theo đúng tỷ lệ của gấu */
       }
     </style>
   </head>
@@ -318,7 +314,7 @@
 
     <script>
       /* =========================================
-         LOGIC GAME KÉO THẢ
+         LOGIC GAME KÉO THẢ TƯƠNG THÍCH MỌI THIẾT BỊ
          ========================================= */
       const board = document.getElementById('puzzle-board');
       const pool = document.getElementById('pieces-pool');
